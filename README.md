@@ -1,54 +1,34 @@
-# 📊 Influencer Brand Collaborations (SQL Project)
+Court Case Bias Detection
 
-A SQL project analyzing how influencers collaborate with brands using bios, affiliate links, and platform engagement metrics. Built using PostgreSQL with sample data and multiple analysis queries.
+This project explores simulated court case data to detect potential racial, gender, or judge-based biases in sentencing and verdict outcomes using SQL.
 
----
+Dataset
 
-## 🗂 Project Structure
+Simulated data includes:
+- **Defendants**: Demographics
+- **Judges**: Identity & Court Locations
+- **Cases**: Crime type, sentence length, and verdicts
 
-- `schema.sql` – Defines the database schema (tables and relationships)
-- `inserts.sql` – Sample data for influencers, bios, and brands
-- `analysis.sql` – Insights using SQL queries (joins, CASE, window functions)
+Schema
 
----
+- **defendants** (id, name, race, gender, age)
+- **judges** (id, name, court_location)
+- **cases** (id, defendant_id, judge_id, crime_type, sentence_length, verdict, case_date)
 
-## 💡 Key Features
+Key Queries
 
-- Identify influencer-brand collaborations via bio links and mentions
-- Classify influencers by follower count and engagement rate
-- Rank influencers within each niche
-- Calculate brand reach and top collaboration trends
+- Average sentence by race
+- Conviction rate by gender
+- Judge-wise disparities for the same crime
+- Sentence length trends over years
 
----
+Insights (Sample)
 
-## 📌 Technologies Used
+- Defendants of Race X received 30% longer sentences for theft on average.
+- One judge consistently gives higher-than-average sentences for fraud.
+- Conviction rate for males: 80%, for females: 60%.
 
-- PostgreSQL
-- SQL: Joins, Aggregates, Window Functions, CASE, String Matching
+Tools Used
 
----
-
-## 🚀 How to Run
-
-1. Set up PostgreSQL locally or use an online tool (like pgAdmin or DB Fiddle)
-2. Run `schema.sql` to create the tables
-3. Run `inserts.sql` to populate sample data
-4. Run `analysis.sql` to explore insights
-
----
-
-## 📎 Example Insights
-
-- Top brands by number of influencer mentions
-- Average influencer reach per brand
-- Engagement leaders by niche
-
----
-
-## 🔗 Project Link
-
-GitHub Repo: [https://github.com/yourusername/influencer-brand-collabs-sql](https://github.com/yourusername/influencer-brand-collabs-sql)
-
----
-
-> Made with 💬 SQL and curiosity for how brands and creators connect!
+- SQL (PostgreSQL / SQLite compatible)
+- Data simulated for educational analysis
